@@ -15,8 +15,10 @@ class LoadDatabase {
   CommandLineRunner initDatabase(LivreRepository repository) {
 
     return args -> {
-      log.info("Preloading " + repository.save(new Livre("Bilbo Baggins", "burglar", true)));
-      log.info("Preloading " + repository.save(new Livre("Frodo Baggins", "thief", false)));
+      log.info("Preloading " + repository.save(new Livre("Economix", "français", false)));
+      log.info("Preloading " + repository.save(new Livre("Watchmen", "anglais", false)));
+      log.info("Preloading " + repository.save(new Livre("Forever Saul Leiter", "anglais", true)));
+      log.info("Preloading " + repository.save(new Livre("Le monde sans fin", "français", true)));
     };
   }
 }
